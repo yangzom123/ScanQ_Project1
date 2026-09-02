@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "933789254037",
+    "project_id": "scanq-2026",
+    "storage_bucket": "scanq-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933789254037:android:68e8d15ece59497fbd769c",
+        "android_client_info": {
+          "package_name": "com.scanq.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMRCmAKaBKhQBRfWQsJHHcpvdN4_jPvok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
