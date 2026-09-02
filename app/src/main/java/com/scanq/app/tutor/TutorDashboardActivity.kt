@@ -70,9 +70,30 @@ class TutorDashboardActivity : AppCompatActivity() {
         findViewById<BottomNavigationView>(R.id.bottomNav).setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> true
-                // TODO: wire nav_modules, nav_students, nav_profile to their activities
-                else -> true
+                R.id.nav_modules -> {
+                    Toast.makeText(this, "Modules screen coming soon", Toast.LENGTH_SHORT).show()
+                    false
+                }
+                R.id.nav_students -> {
+                    Toast.makeText(this, "Students screen coming soon", Toast.LENGTH_SHORT).show()
+                    false
+                }
+                R.id.nav_profile -> {
+                    Toast.makeText(this, "Profile screen coming soon", Toast.LENGTH_SHORT).show()
+                    false
+                }
+                else -> false
             }
+        }
+
+        findViewById<android.widget.LinearLayout>(R.id.cardGenerateQr).setOnClickListener {
+            Toast.makeText(this, "QR generation coming soon", Toast.LENGTH_SHORT).show()
+        }
+        findViewById<android.widget.LinearLayout>(R.id.cardRecords).setOnClickListener {
+            Toast.makeText(this, "Records screen coming soon", Toast.LENGTH_SHORT).show()
+        }
+        findViewById<android.widget.ImageButton>(R.id.fabGenerateQr).setOnClickListener {
+            Toast.makeText(this, "QR generation coming soon", Toast.LENGTH_SHORT).show()
         }
 
         // TODO: findViewById<ImageButton>(R.id.fabGenerateQr) / cardGenerateQr ->

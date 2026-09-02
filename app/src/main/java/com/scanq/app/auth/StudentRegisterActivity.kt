@@ -35,7 +35,7 @@ class StudentRegisterActivity : AppCompatActivity() {
             val password = etPassword.text.toString().trim()
             val confirmPassword = etConfirmPassword.text.toString().trim()
 
-            if (fullName.isEmpty() || studentId.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            if (fullName.isEmpty() || studentId.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -44,14 +44,18 @@ class StudentRegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            auth.createUserWithEmailAndPassword(email, password)
+            // Build a synthetic auth email from the Student ID (Firebase Auth needs an email format)
+            val sanitizedId = studentId.lowercase().replace(Regex("[^a-z0-9]"), "")
+            val authEmail = "$sanitizedId@scan-student.app"
+
+            auth.createUserWithEmailAndPassword(authEmail, password)
                 .addOnSuccessListener { authResult ->
                     val uid = authResult.user?.uid ?: return@addOnSuccessListener
                     val user = AppUser(
                         uid = uid,
                         fullName = fullName,
                         idNumber = studentId,
-                        email = email,
+                        email = email, // real email, stored for display/contact only - not used for login
                         role = "student"
                     )
                     db.collection("students").document(uid).set(user)
@@ -59,6 +63,9 @@ class StudentRegisterActivity : AppCompatActivity() {
                             Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this, StudentDashboardActivity::class.java))
                             finish()
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(this, "Failed to save profile: ${e.message}", Toast.LENGTH_SHORT).show()
                         }
                 }
                 .addOnFailureListener { e ->

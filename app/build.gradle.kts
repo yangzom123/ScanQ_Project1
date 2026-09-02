@@ -50,6 +50,5 @@ dependencies {
     implementation("com.google.zxing:core:3.5.3")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
-    // Charts (for attendance percentage rings, optional)
-    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
 }

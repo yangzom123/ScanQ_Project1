@@ -8,14 +8,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 import com.scanq.app.R
 import com.scanq.app.student.StudentDashboardActivity
 
 class StudentLoginActivity : AppCompatActivity() {
 
     private val auth = FirebaseAuth.getInstance()
-    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,28 +37,16 @@ class StudentLoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Students sign in with Student ID, but Firebase Auth needs an email.
-            // We look up the linked email in Firestore first, then sign in.
-            db.collection("students")
-                .whereEqualTo("idNumber", studentId)
-                .get()
-                .addOnSuccessListener { result ->
-                    if (result.isEmpty) {
-                        Toast.makeText(this, "Student ID not found", Toast.LENGTH_SHORT).show()
-                        return@addOnSuccessListener
-                    }
-                    val email = result.documents[0].getString("email") ?: ""
-                    auth.signInWithEmailAndPassword(email, password)
-                        .addOnSuccessListener {
-                            startActivity(Intent(this, StudentDashboardActivity::class.java))
-                            finish()
-                        }
-                        .addOnFailureListener { e ->
-                            Toast.makeText(this, "Login failed: ${e.message}", Toast.LENGTH_SHORT).show()
-                        }
+            val sanitizedId = studentId.lowercase().replace(Regex("[^a-z0-9]"), "")
+            val authEmail = "$sanitizedId@scan-student.app"
+
+            auth.signInWithEmailAndPassword(authEmail, password)
+                .addOnSuccessListener {
+                    startActivity(Intent(this, StudentDashboardActivity::class.java))
+                    finish()
                 }
                 .addOnFailureListener { e ->
-                    Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Login failed: check your ID and password", Toast.LENGTH_SHORT).show()
                 }
         }
     }

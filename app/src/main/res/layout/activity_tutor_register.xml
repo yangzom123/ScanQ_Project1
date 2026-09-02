@@ -1,55 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_dark">
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="28dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Tutor Register"
-        android:textColor="@color/text_primary"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <!-- Full Name -->
-    <TextView style="@style/FieldLabel" android:text="Full Name" android:layout_marginTop="28dp" />
-    <EditText android:id="@+id/etFullName" style="@style/FieldInput" android:hint="Enter Full Name" android:inputType="textPersonName" />
-
-    <!-- Tutor ID -->
-    <TextView style="@style/FieldLabel" android:text="Tutor ID" android:layout_marginTop="16dp" />
-    <EditText android:id="@+id/etTutorId" style="@style/FieldInput" android:hint="Enter Tutor ID" android:inputType="text" />
-
-    <!-- Email -->
-    <TextView style="@style/FieldLabel" android:text="Email" android:layout_marginTop="16dp" />
-    <EditText android:id="@+id/etEmail" style="@style/FieldInput" android:hint="Enter Email" android:inputType="textEmailAddress" />
-
-    <!-- Password -->
-    <TextView style="@style/FieldLabel" android:text="Password" android:layout_marginTop="16dp" />
-    <EditText android:id="@+id/etPassword" style="@style/FieldInput" android:hint="Enter Password" android:inputType="textPassword" />
-
-    <!-- Confirm Password -->
-    <TextView style="@style/FieldLabel" android:text="Confirm Password" android:layout_marginTop="16dp" />
-    <EditText android:id="@+id/etConfirmPassword" style="@style/FieldInput" android:hint="Confirm Password" android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/btnRegister"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/bg_button_primary"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:layout_height="match_parent"
+        android:padding="28dp">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/card_dark"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Tutor Register"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Full Name -->
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_input"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_dark" />
+
+            <!-- Tutor ID -->
+            <EditText
+                android:id="@+id/etTutorId"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input"
+                android:hint="Tutor ID"
+                android:inputType="text"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_dark" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_dark" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_dark" />
+
+            <!-- Confirm Password -->
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_dark" />
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!-- Login Link -->
+            <TextView
+                android:id="@+id/tvGoToLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Already have an account? Login"
+                android:textColor="@color/accent_blue"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
 </ScrollView>

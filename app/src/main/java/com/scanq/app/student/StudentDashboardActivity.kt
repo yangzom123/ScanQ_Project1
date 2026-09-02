@@ -3,6 +3,7 @@ package com.scanq.app.student
 import android.os.Bundle
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -62,9 +63,30 @@ class StudentDashboardActivity : AppCompatActivity() {
         findViewById<BottomNavigationView>(R.id.bottomNav).setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> true
-                // TODO: wire nav_modules, nav_attendance, nav_profile to their activities
-                else -> true
+                R.id.nav_modules -> {
+                    Toast.makeText(this, "My Modules screen coming soon", Toast.LENGTH_SHORT).show()
+                    false
+                }
+                R.id.nav_attendance -> {
+                    Toast.makeText(this, "Attendance screen coming soon", Toast.LENGTH_SHORT).show()
+                    false
+                }
+                R.id.nav_profile -> {
+                    Toast.makeText(this, "Profile screen coming soon", Toast.LENGTH_SHORT).show()
+                    false
+                }
+                else -> false
             }
+        }
+
+        findViewById<android.widget.LinearLayout>(R.id.cardScanQr).setOnClickListener {
+            Toast.makeText(this, "QR scanning coming soon", Toast.LENGTH_SHORT).show()
+        }
+        findViewById<android.widget.LinearLayout>(R.id.cardMyAttendance).setOnClickListener {
+            Toast.makeText(this, "Attendance screen coming soon", Toast.LENGTH_SHORT).show()
+        }
+        findViewById<android.widget.ImageButton>(R.id.fabScan).setOnClickListener {
+            Toast.makeText(this, "QR scanning coming soon", Toast.LENGTH_SHORT).show()
         }
 
         // TODO: findViewById<ImageButton>(R.id.fabScan) / cardScanQr -> launch ZXing scanner,

@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".AboutUsActivity" android:exported="false" />
+
         <activity android:name=".auth.StudentLoginActivity" android:exported="false" />
         <activity android:name=".auth.StudentRegisterActivity" android:exported="false" />
         <activity android:name=".auth.TutorLoginActivity" android:exported="false" />
