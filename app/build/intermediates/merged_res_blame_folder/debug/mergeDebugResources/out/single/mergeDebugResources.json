@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "com.scanq.app-debug-41:/menu_menu_tutor_nav.xml.flat",
+        "source": "com.scanq.app-main-43:/menu/menu_tutor_nav.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_bg_circle_blue.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/bg_circle_blue.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_bg_button_primary.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/bg_button_primary.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_info.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/info.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_bg_card_light.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/bg_card_light.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_activity_about_us.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/activity_about_us.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_bg_card.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_background.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/background.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_activity_student_dashboard.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/activity_student_dashboard.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_bg_logo.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/bg_logo.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_activity_student_login.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/activity_student_login.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.scanq.app-main-43:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_activity_tutor_login.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/activity_tutor_login.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_activity_tutor_register.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/activity_tutor_register.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_bg_input.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/bg_input.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.scanq.app-main-43:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_item_module_student.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/item_module_student.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_logo.jpeg.flat",
+        "source": "com.scanq.app-main-43:/drawable/logo.jpeg"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_activity_student_register.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/activity_student_register.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_activity_welcome.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/activity_welcome.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/menu_menu_student_nav.xml.flat",
+        "source": "com.scanq.app-main-43:/menu/menu_student_nav.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_activity_tutor_dashboard.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/activity_tutor_dashboard.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/drawable_bg_button_outline.xml.flat",
+        "source": "com.scanq.app-main-43:/drawable/bg_button_outline.xml"
+    },
+    {
+        "merged": "com.scanq.app-debug-41:/layout_item_session_tutor.xml.flat",
+        "source": "com.scanq.app-main-43:/layout/item_session_tutor.xml"
+    }
+]
